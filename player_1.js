@@ -8,24 +8,58 @@ function make_move() {
    if (board[get_my_x()][get_my_y()] > 0) {
        return TAKE;
    }
-
+   var array = [x][y];
    var rand = Math.random() * 4;
    for(int i =0; i<board[x].length; i++)
    {
-      for(int n=0; n<board[y].length; i++)
+      for(int n=0; n<board[y].length; n++)
          {
-   if(has_item(button[get_my_x()+n][get_my_y()])
-   if(has_item(button[get_my_x()+n][get_my_y()+i])
-   if(has_item(button[get_my_x()+n][get_my_y()-i])
-   if(has_item(button[get_my_x()-n][get_my_y()])
-   if(has_item(button[get_my_x()-n][get_my_y()+i])
-   if(has_item(button[get_my_x()-n][get_my_y()-i])
-   if(has_item(button[get_my_x()][get_my_y()+i])
-   if(has_item(button[get_my_x()][get_my_y()-i])
+   if(has_item(button[get_my_x()][get_my_y()]))
+      return TAKE;
+   else if(has_item(button[get_my_x()+n][get_my_y()])
+      return EAST;
+   else if(has_item(button[get_my_x()+n][get_my_y()+i])
+   {
+      return EAST;
+      return PASS;
+      return SOUTH;
+   }
+   else if(has_item(button[get_my_x()+n][get_my_y()-i])
+   {
+      return EAST;
+      return PASS;
+      return NORTH;
+   }
+   else if(has_item(button[get_my_x()-n][get_my_y()])
+      return WEST;
+   else if(has_item(button[get_my_x()-n][get_my_y()+i])
+   {
+      return WEST;
+      return PASS;
+      return SOUTH;
+   }
+   else if(has_item(button[get_my_x()-n][get_my_y()-i])
+   {
+      return WEST;
+      return PASS;
+      return NORTH;
+   }
+   else if(has_item(button[get_my_x()][get_my_y()+i])
+      return SOUTH;
+   else if(has_item(button[get_my_x()][get_my_y()-i])
+      return NORTH;
+   else 
+   {
+       if (rand < 1) return NORTH;
+       if (rand < 2) return SOUTH;
+      if (rand < 3) return EAST;
+      if (rand < 4) return WEST;
+   }
          }
    }
+   
   
-   /*if (rand < 1) return NORTH;
+  /* if (rand < 1) return NORTH;
    if (rand < 2) return SOUTH;
    if (rand < 3) return EAST;
    if (rand < 4) return WEST;*/
