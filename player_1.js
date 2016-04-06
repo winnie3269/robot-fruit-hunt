@@ -10,9 +10,9 @@ function make_move() {
    }
    var array = [x][y];
    var rand = Math.random() * 4;
-   for(int i =0; i<board[x].length; i++)
+   for(var i =0; i<board[x].length; i++)
    {
-      for(int n=0; n<board[y].length; n++)
+      for(var n=0; n<board[y].length; n++)
          {
    if(has_item(button[get_my_x()][get_my_y()]))
       return TAKE;
