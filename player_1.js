@@ -10,11 +10,25 @@ function make_move() {
    }
 
    var rand = Math.random() * 4;
-
-   if (rand < 1) return NORTH;
+   for(int i =0; i<board[x].length; i++)
+   {
+      for(int n=0; n<board[y].length; i++)
+         {
+   if(has_item(button[get_my_x()+n][get_my_y()])
+   if(has_item(button[get_my_x()+n][get_my_y()+i])
+   if(has_item(button[get_my_x()+n][get_my_y()-i])
+   if(has_item(button[get_my_x()-n][get_my_y()])
+   if(has_item(button[get_my_x()-n][get_my_y()+i])
+   if(has_item(button[get_my_x()-n][get_my_y()-i])
+   if(has_item(button[get_my_x()][get_my_y()+i])
+   if(has_item(button[get_my_x()][get_my_y()-i])
+         }
+   }
+  
+   /*if (rand < 1) return NORTH;
    if (rand < 2) return SOUTH;
    if (rand < 3) return EAST;
-   if (rand < 4) return WEST;
+   if (rand < 4) return WEST;*/
 
    return PASS;
 }
