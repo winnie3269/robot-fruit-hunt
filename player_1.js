@@ -13,39 +13,39 @@ function make_move() {
    {
       for(var n=0; n<board[y].length; n++)
          {*/
-   if(has_item(button[get_my_x()][get_my_y()]))
+   if(has_item(board[get_my_x()][get_my_y()]))
       return TAKE;
-   else if(has_item(button[get_my_x()+1][get_my_y()]))
+   else if(has_item(board[get_my_x()+1][get_my_y()]))
       return EAST;
-   else if(has_item(button[get_my_x()+1][get_my_y()+1]))
+   else if(has_item(board[get_my_x()+1][get_my_y()+1]))
    {
       return EAST;
       return PASS;
       return SOUTH;
    }
-   else if(has_item(button[get_my_x()+1][get_my_y()-1]))
+   else if(has_item(board[get_my_x()+1][get_my_y()-1]))
    {
       return EAST;
       return PASS;
       return NORTH;
    }
-   else if(has_item(button[get_my_x()-1][get_my_y()]))
+   else if(has_item(board[get_my_x()-1][get_my_y()]))
       return WEST;
-   else if(has_item(button[get_my_x()-1][get_my_y()+1]))
+   else if(has_item(board[get_my_x()-1][get_my_y()+1]))
    {
       return WEST;
       return PASS;
       return SOUTH;
    }
-   else if(has_item(button[get_my_x()-1][get_my_y()-1]))
+   else if(has_item(board[get_my_x()-1][get_my_y()-1]))
    {
       return WEST;
       return PASS;
       return NORTH;
    }
-   else if(has_item(button[get_my_x()][get_my_y()+1]))
+   else if(has_item(board[get_my_x()][get_my_y()+1]))
       return SOUTH;
-   else if(has_item(button[get_my_x()][get_my_y()-1]))
+   else if(has_item(board[get_my_x()][get_my_y()-1]))
       return NORTH;
    else 
    {
