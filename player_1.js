@@ -8,7 +8,6 @@ function make_move() {
    if (board[get_my_x()][get_my_y()] > 0) {
        return TAKE;
    }
-   var array = [x][y];
    var rand = Math.random() * 4;
    for(var i =0; i<board[x].length; i++)
    {
