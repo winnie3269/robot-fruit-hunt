@@ -17,6 +17,20 @@ function make_move() {
       return TAKE;
    else if(has_item(board[get_my_x()+1][get_my_y()]))
       return EAST;
+   else if(has_item(board[get_my_x()-1][get_my_y()]))
+      return WEST;
+   else if(has_item(board[get_my_x()][get_my_y()+1]))
+      return SOUTH;
+   else if(has_item(board[get_my_x()][get_my_y()-1]))
+      return NORTH;
+   else if(has_item(board[get_my_x()+2][get_my_y()]))
+      return EAST;
+   else if(has_item(board[get_my_x()-2][get_my_y()]))
+      return WEST;
+   else if(has_item(board[get_my_x()][get_my_y()+2]))
+      return SOUTH;
+   else if(has_item(board[get_my_x()][get_my_y()-2]))
+      return NORTH;
    else if(has_item(board[get_my_x()+1][get_my_y()+1]))
    {
       return EAST;
@@ -29,8 +43,6 @@ function make_move() {
       return PASS;
       return NORTH;
    }
-   else if(has_item(board[get_my_x()-1][get_my_y()]))
-      return WEST;
    else if(has_item(board[get_my_x()-1][get_my_y()+1]))
    {
       return WEST;
@@ -43,10 +55,6 @@ function make_move() {
       return PASS;
       return NORTH;
    }
-   else if(has_item(board[get_my_x()][get_my_y()+1]))
-      return SOUTH;
-   else if(has_item(board[get_my_x()][get_my_y()-1]))
-      return NORTH;
    else 
    {
        if (rand < 1) return NORTH;
