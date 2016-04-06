@@ -23,14 +23,6 @@ function make_move() {
       return SOUTH;
    else if(has_item(board[get_my_x()][get_my_y()-1]))
       return NORTH;
-   else if(has_item(board[get_my_x()+2][get_my_y()]))
-      return EAST;
-   else if(has_item(board[get_my_x()-2][get_my_y()]))
-      return WEST;
-   else if(has_item(board[get_my_x()][get_my_y()+2]))
-      return SOUTH;
-   else if(has_item(board[get_my_x()][get_my_y()-2]))
-      return NORTH;
    else if(has_item(board[get_my_x()+1][get_my_y()+1]))
    {
       return EAST;
